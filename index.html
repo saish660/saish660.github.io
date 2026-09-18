@@ -15,10 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}"
-    />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <canvas id="starfield"></canvas>
@@ -91,7 +88,7 @@
           <div class="hero-avatar">
             <div class="avatar-glow"></div>
             <img
-              src="{{ url_for('static', filename='media/final_avatar-Photoroom.png') }}"
+              src="/media/final_avatar-Photoroom.png"
               alt="3D portrait illustration"
               class="avatar-image"
             />
@@ -302,7 +299,7 @@
               <div class="carousel-track" data-carousel-track>
                 <figure class="carousel-slide is-active">
                   <img
-                    src="{{ url_for('static', filename='media/home_screen.png') }}"
+                    src="/media/home_screen.png"
                     alt="Home Screen"
                     loading="lazy"
                   />
@@ -310,7 +307,7 @@
                 </figure>
                 <figure class="carousel-slide">
                   <img
-                    src="{{ url_for('static', filename='media/how_it_works.png') }}"
+                    src="/media/how_it_works.png"
                     alt="How website works"
                     loading="lazy"
                   />
@@ -318,7 +315,7 @@
                 </figure>
                 <figure class="carousel-slide">
                   <img
-                    src="{{ url_for('static', filename='media/maps.png') }}"
+                    src="/media/maps.png"
                     alt="Search for stores on maps"
                     loading="lazy"
                   />
@@ -326,7 +323,7 @@
                 </figure>
                 <figure class="carousel-slide">
                   <img
-                    src="{{ url_for('static', filename='media/products.png') }}"
+                    src="/media/products.png"
                     alt="Browse through products"
                     loading="lazy"
                   />
@@ -334,7 +331,7 @@
                 </figure>
                 <figure class="carousel-slide">
                   <img
-                    src="{{ url_for('static', filename='media/product.png') }}"
+                    src="/media/product.png"
                     alt="View products"
                     loading="lazy"
                   />
@@ -395,7 +392,7 @@
               <div class="carousel-track" data-carousel-track>
                 <figure class="carousel-slide is-active">
                   <img
-                    src="{{ url_for('static', filename='media/home-screen.png') }}"
+                    src="media/home-screen.png"
                     alt="home page"
                     loading="lazy"
                   />
@@ -403,7 +400,7 @@
                 </figure>
                 <figure class="carousel-slide">
                   <img
-                    src="{{ url_for('static', filename='media/3d_visualisation.png') }}"
+                    src="media/3d_visualisation.png"
                     alt="Visualize progress with 3d patch"
                     loading="lazy"
                   />
@@ -411,7 +408,7 @@
                 </figure>
                 <figure class="carousel-slide">
                   <img
-                    src="{{ url_for('static', filename='media/ai_suggestions.png') }}"
+                    src="media/ai_suggestions.png"
                     alt="habit suggestions by AI"
                     loading="lazy"
                   />
@@ -419,7 +416,7 @@
                 </figure>
                 <figure class="carousel-slide">
                   <img
-                    src="{{ url_for('static', filename='media/communities.png') }}"
+                    src="media/communities.png"
                     alt="Unite with others"
                     loading="lazy"
                   />
@@ -427,7 +424,7 @@
                 </figure>
                 <figure class="carousel-slide">
                   <img
-                    src="{{ url_for('static', filename='media/prediction_notification.png') }}"
+                    src="media/prediction_notification.png"
                     alt="AI prediction and notifications"
                     loading="lazy"
                   />
@@ -435,7 +432,7 @@
                 </figure>
                 <figure class="carousel-slide">
                   <img
-                    src="{{ url_for('static', filename='media/chatbot.png') }}"
+                    src="media/chatbot.png"
                     alt="Talk with AI chatbot"
                     loading="lazy"
                   />
@@ -496,7 +493,7 @@
               <div class="carousel-track" data-carousel-track>
                 <figure class="carousel-slide is-active">
                   <img
-                    src="{{ url_for('static', filename='media/project_diagram.png') }}"
+                    src="media/project_diagram.png"
                     alt="Project Diagram"
                     loading="lazy"
                   />
@@ -504,7 +501,7 @@
                 </figure>
                 <figure class="carousel-slide">
                   <img
-                    src="{{ url_for('static', filename='media/attendance_result.png') }}"
+                    src="media/attendance_result.png"
                     alt="Attendance result screenshot of app"
                     loading="lazy"
                   />
@@ -603,6 +600,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
