@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saish Gawade | Portfolio</title>
+    <meta
+      name="description"
+      content="Full-stack developer from Goa building polished digital experiences with Python, JavaScript, and modern web systems."
+    />
+    <meta name="theme-color" content="#070d1d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <canvas id="starfield"></canvas>
+
+    <div class="content">
+      <nav class="space-nav cube" aria-label="Main navigation">
+        <div class="logo"><span>Saish</span>Gawade</div>
+        <button
+          type="button"
+          class="nav-toggle"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="nav-toggle-lines" aria-hidden="true"></span>
+        </button>
+        <div class="nav-links" id="primary-navigation">
+          <button type="button" class="nav-btn" data-scroll="#about">
+            About
+          </button>
+          <button type="button" class="nav-btn" data-scroll="#experience">
+            Experience
+          </button>
+          <button type="button" class="nav-btn" data-action="projects">
+            Projects
+          </button>
+          <button type="button" class="nav-btn" data-scroll="#contact">
+            Contact
+          </button>
+        </div>
+      </nav>
+      <div class="nav-overlay" data-nav-overlay aria-hidden="true"></div>
+
+      <header class="hero cube float">
+        <div class="hero-copy">
+          <p class="eyebrow">Developer · Builder · Problem solver</p>
+          <h1>Hi, I’m Saish.</h1>
+          <p class="subtitle">
+            I design thoughtful digital experiences and build reliable web
+            systems that balance clean interfaces with strong backend
+            foundations.
+          </p>
+          <div class="cta">
+            <a
+              href="#projects-portal"
+              class="btn primary"
+              data-action="projects"
+              >Explore Projects</a
+            >
+            <a href="#contact" class="btn ghost">Let’s Connect</a>
+          </div>
+          <div class="quick-metrics" aria-label="Quick stats">
+            <div>
+              <strong>5+</strong>
+              <span>Years learning & building</span>
+            </div>
+            <div>
+              <strong>6+</strong>
+              <span>Real Projects built</span>
+            </div>
+            <div>
+              <strong>3</strong>
+              <span>Tech stacks explored</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel" aria-label="Profile visual">
+          <div class="hero-avatar">
+            <div class="avatar-glow"></div>
+            <img
+              src="{{ url_for('static', filename='media/final_avatar-Photoroom.png') }}"
+              alt="3D portrait illustration"
+              class="avatar-image"
+            />
+          </div>
+          <div class="hero-tags">
+            <span>Python</span>
+            <span>JavaScript</span>
+            <span>Flask</span>
+            <span>Django</span>
+          </div>
+        </div>
+      </header>
+
+      <section id="about" class="panel cube float">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>Building with intention.</h2>
+        </div>
+        <p class="lead">
+          I’m a curious developer from Goa who enjoys blending modern visual
+          design with practical engineering. My work sits at the intersection of
+          web interfaces, backend systems, and ideas that need to feel smooth
+          and human.
+        </p>
+        <div class="skills">
+          <div class="skill-box">
+            <p class="label">Languages</p>
+            <p>Python · JavaScript · Java · PHP · HTML/CSS</p>
+          </div>
+          <div class="skill-box">
+            <p class="label">Frameworks</p>
+            <p>Flask · Django · React</p>
+          </div>
+          <div class="skill-box">
+            <p class="label">Tools</p>
+            <p>MongoDB · AWS · Git · Figma</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="panel cube float">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2>Recent work and learning.</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <p class="label">July — August 2025 | Remote</p>
+            <h3>Web Development Intern · Lenovo India</h3>
+            <p>
+              Built responsive interfaces and Flask-backed solutions, applying
+              modern web design patterns while exploring human-centered product
+              thinking.
+            </p>
+          </article>
+          <article>
+            <p class="label">June — July 2025 | Remote</p>
+            <h3>AI Intern · Lenovo India</h3>
+            <p>
+              Worked with AI/ML workflows, prompt engineering, and automation
+              tools to prototype intelligent solutions for real-world problems
+              and productivity tasks.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="certifications" class="panel cube float">
+        <div class="section-heading">
+          <p class="eyebrow">Certifications</p>
+          <h2>Learning that shaped my toolkit.</h2>
+        </div>
+        <div class="cert-grid">
+          <article class="cert-card">
+            <p class="label">Scaler</p>
+            <h3>AWS Free Tier</h3>
+            <p>
+              Explored core AWS services and cloud workflows through hands-on
+              exposure.
+            </p>
+          </article>
+          <article class="cert-card">
+            <p class="label">HarvardX CS50</p>
+            <h3>Web Programming with Python and JavaScript</h3>
+            <p>
+              Developed full-stack concepts with React, Django, and
+              database-driven applications.
+            </p>
+          </article>
+          <article class="cert-card">
+            <p class="label">HarvardX CS50</p>
+            <h3>Introduction to Programming with Python</h3>
+            <p>
+              Built a strong foundation in logic, problem solving, and software
+              development fundamentals.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="social" class="panel cube float">
+        <div class="section-heading">
+          <p class="eyebrow">Connect</p>
+          <h2>Let’s stay in touch.</h2>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/saish660" target="_blank" rel="noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/saish660"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn</a
+          >
+        </div>
+      </section>
+
+      <section id="contact" class="panel cube float">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>Start a conversation.</h2>
+        </div>
+        <p class="lead compact">
+          Need a collaborator for your next idea, product, or build? I’d love to
+          hear about it.
+        </p>
+        <form
+          class="contact-form"
+          method="POSt"
+          action="https://api.web3forms.com/submit"
+          data-contact-form
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="97b69af0-bfaf-4325-9711-1677a49dc30c"
+          />
+          <label>
+            <span>Name</span>
+            <input
+              type="text"
+              name="name"
+              placeholder="Ada Lovelace"
+              autocomplete="name"
+              required
+            />
+          </label>
+          <label>
+            <span>Email</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="ada@nebula.io"
+              autocomplete="email"
+              required
+            />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Type your message..."
+              required
+            ></textarea>
+          </label>
+          <button type="submit" class="btn primary">Send Message</button>
+        </form>
+      </section>
+
+      <footer class="panel cube float">
+        <p>© 2026 Saish Gawade</p>
+      </footer>
+    </div>
+
+    <section
+      id="projects-portal"
+      class="projects-portal"
+      aria-label="Project showcase"
+    >
+      <div class="projects-grid">
+        <div class="projects-toolbar panel cube float">
+          <div>
+            <p class="eyebrow">Portfolio</p>
+            <h2>Selected projects.</h2>
+          </div>
+          <button
+            type="button"
+            class="projects-close"
+            aria-label="Close projects"
+          >
+            Go back
+          </button>
+        </div>
+
+        <div class="projects-cards">
+          <article class="project-card panel cube float" data-project>
+            <div class="project-carousel" data-carousel tabindex="0">
+              <button
+                type="button"
+                class="carousel-nav prev"
+                aria-label="Previous image"
+                data-carousel-prev
+              >
+                ‹
+              </button>
+              <div class="carousel-track" data-carousel-track>
+                <figure class="carousel-slide is-active">
+                  <img
+                    src="{{ url_for('static', filename='media/home_screen.png') }}"
+                    alt="Home Screen"
+                    loading="lazy"
+                  />
+                  <figcaption>Landing Page</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <img
+                    src="{{ url_for('static', filename='media/how_it_works.png') }}"
+                    alt="How website works"
+                    loading="lazy"
+                  />
+                  <figcaption>How it comes together</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <img
+                    src="{{ url_for('static', filename='media/maps.png') }}"
+                    alt="Search for stores on maps"
+                    loading="lazy"
+                  />
+                  <figcaption>Search nearby stores on maps</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <img
+                    src="{{ url_for('static', filename='media/products.png') }}"
+                    alt="Browse through products"
+                    loading="lazy"
+                  />
+                  <figcaption>Browse, search and filter products</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <img
+                    src="{{ url_for('static', filename='media/product.png') }}"
+                    alt="View products"
+                    loading="lazy"
+                  />
+                  <figcaption>View product details</figcaption>
+                </figure>
+              </div>
+              <button
+                type="button"
+                class="carousel-nav next"
+                aria-label="Next image"
+                data-carousel-next
+              >
+                ›
+              </button>
+              <div class="carousel-status" aria-live="polite">
+                <span data-carousel-current>1</span>
+                <span aria-hidden="true">/</span>
+                <span data-carousel-total>3</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Amcho Posro</h3>
+              <p class="project-subtitle">
+                Online marketplace for local businesses in Goa.
+              </p>
+              <p>
+                Built a complete web application for a community marketplace
+                where local sellers can create their storefronts, list products,
+                and connect with nearby customers through a map-based
+                experience.
+              </p>
+              <ul class="tech-stack">
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>Flask</li>
+                <li>MongoDB</li>
+              </ul>
+              <a
+                href="https://github.com/saish660/amcho-pasro"
+                class="project-link"
+                target="_blank"
+                rel="noreferrer"
+                >View GitHub ↗</a
+              >
+            </div>
+          </article>
+
+          <article class="project-card panel cube float" data-project>
+            <div class="project-carousel" data-carousel tabindex="0">
+              <button
+                type="button"
+                class="carousel-nav prev"
+                aria-label="Previous image"
+                data-carousel-prev
+              >
+                ‹
+              </button>
+              <div class="carousel-track" data-carousel-track>
+                <figure class="carousel-slide is-active">
+                  <img
+                    src="{{ url_for('static', filename='media/home-screen.png') }}"
+                    alt="home page"
+                    loading="lazy"
+                  />
+                  <figcaption>Home page</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <img
+                    src="{{ url_for('static', filename='media/3d_visualisation.png') }}"
+                    alt="Visualize progress with 3d patch"
+                    loading="lazy"
+                  />
+                  <figcaption>3D visualization of your score</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <img
+                    src="{{ url_for('static', filename='media/ai_suggestions.png') }}"
+                    alt="habit suggestions by AI"
+                    loading="lazy"
+                  />
+                  <figcaption>Habit suggestions by AI</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <img
+                    src="{{ url_for('static', filename='media/communities.png') }}"
+                    alt="Unite with others"
+                    loading="lazy"
+                  />
+                  <figcaption>Team up with communities</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <img
+                    src="{{ url_for('static', filename='media/prediction_notification.png') }}"
+                    alt="AI prediction and notifications"
+                    loading="lazy"
+                  />
+                  <figcaption>AI predicts future footprints</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <img
+                    src="{{ url_for('static', filename='media/chatbot.png') }}"
+                    alt="Talk with AI chatbot"
+                    loading="lazy"
+                  />
+                  <figcaption>AI chatbot powered by Botpress</figcaption>
+                </figure>
+              </div>
+              <button
+                type="button"
+                class="carousel-nav next"
+                aria-label="Next image"
+                data-carousel-next
+              >
+                ›
+              </button>
+              <div class="carousel-status" aria-live="polite">
+                <span data-carousel-current>1</span>
+                <span aria-hidden="true">/</span>
+                <span data-carousel-total>3</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">EcoTrack</h3>
+              <p class="project-subtitle">
+                AI-based mobile app to reduce your carbon footprint.
+              </p>
+              <p>
+                A carbon-awareness web app embedded in an Android experience
+                that helps users track small daily habits, visualize progress,
+                and discover AI-based sustainable suggestions.
+              </p>
+              <ul class="tech-stack">
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>Three.js</li>
+                <li>Django</li>
+                <li>SQLite</li>
+              </ul>
+              <a
+                href="https://github.com/saish660/Ecotrack-App"
+                class="project-link"
+                target="_blank"
+                rel="noreferrer"
+                >View GitHub ↗</a
+              >
+            </div>
+          </article>
+
+          <article class="project-card panel cube float" data-project>
+            <div class="project-carousel" data-carousel tabindex="0">
+              <button
+                type="button"
+                class="carousel-nav prev"
+                aria-label="Previous image"
+                data-carousel-prev
+              >
+                ‹
+              </button>
+              <div class="carousel-track" data-carousel-track>
+                <figure class="carousel-slide is-active">
+                  <img
+                    src="{{ url_for('static', filename='media/project_diagram.png') }}"
+                    alt="Project Diagram"
+                    loading="lazy"
+                  />
+                  <figcaption>System architecture</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <img
+                    src="{{ url_for('static', filename='media/attendance_result.png') }}"
+                    alt="Attendance result screenshot of app"
+                    loading="lazy"
+                  />
+                  <figcaption>Automated attendance result</figcaption>
+                </figure>
+              </div>
+              <button
+                type="button"
+                class="carousel-nav next"
+                aria-label="Next image"
+                data-carousel-next
+              >
+                ›
+              </button>
+              <div class="carousel-status" aria-live="polite">
+                <span data-carousel-current>1</span>
+                <span aria-hidden="true">/</span>
+                <span data-carousel-total>3</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">College Final Year Project</h3>
+              <p class="project-subtitle">
+                AI-based classroom management system.
+              </p>
+              <p>
+                Designed an intelligent classroom automation system using YOLO
+                object detection and facial recognition to control lighting
+                based on occupancy and streamline attendance management with an
+                IP camera feed.
+              </p>
+              <ul class="tech-stack">
+                <li>HTML/CSS</li>
+                <li>Django</li>
+                <li>Python</li>
+                <li>Tkinter</li>
+                <li>MongoDB</li>
+                <li>TensorFlow</li>
+                <li>Arduino</li>
+              </ul>
+              <a
+                href="https://github.com/saish660/College-Final-Project"
+                class="project-link"
+                target="_blank"
+                rel="noreferrer"
+                >View GitHub ↗</a
+              >
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="image-modal" data-image-modal aria-hidden="true">
+      <div class="image-modal-backdrop" data-image-modal-close></div>
+      <div
+        class="image-modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Project image viewer"
+      >
+        <button
+          type="button"
+          class="image-modal-close"
+          data-image-modal-close
+          aria-label="Close image viewer"
+        >
+          ×
+        </button>
+        <button
+          type="button"
+          class="image-modal-nav prev"
+          data-image-modal-prev
+          aria-label="Previous image"
+        >
+          ‹
+        </button>
+        <figure class="image-modal-frame">
+          <img data-image-modal-img alt="" />
+          <figcaption data-image-modal-caption></figcaption>
+        </figure>
+        <button
+          type="button"
+          class="image-modal-nav next"
+          data-image-modal-next
+          aria-label="Next image"
+        >
+          ›
+        </button>
+        <div class="image-modal-status">
+          <span data-image-modal-current>1</span>
+          <span aria-hidden="true">/</span>
+          <span data-image-modal-total>1</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
